@@ -22,4 +22,4 @@ if (year % 400 == 0) or (year % 4 == 0) and (year % 100 == 0):
     leap = 1
 if (leap == 1):
     sum += 1
-print('it is the %dth day'%sum)
+print('it is the %dth day' % sum)
