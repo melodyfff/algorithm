@@ -11,22 +11,24 @@
 # Fn = F[n-1]+ F[n-2](n=>2)
 from Tools.scripts.treesync import raw_input
 
-# def fib():
-n = int(raw_input('define n(n=>1) = '))
-if (n < 1):
-    print('error number!')
-a,b= 0,1
-for i in range(n):
-    print(a, end="\t")
-    a, b = b, a + b
+# 时间复杂度O（n） 空间复杂O（n）
+def fib():
+    n = int(raw_input('define n(n=>1) = '))
+    l = []
+    if (n < 1):
+        print('error number!')
+    a, b = 0, 1
+    for i in range(n):
+        l.append(a)
+        a, b = b, a + b
+    return l
+print(fib())
+
 
 # def fib1(n):
 #     a,b = 1,1
 #     for i in range(n-1):
 #         a,b = b,a+b
 #     return a
-#
 # # 输出了第10个斐波那契数列
 # print(fib1(1))
-# print(fib())
-
